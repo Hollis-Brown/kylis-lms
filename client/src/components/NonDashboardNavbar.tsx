@@ -9,7 +9,12 @@ import React from "react";
 const NonDashboardNavbar = () => {
   const { user } = useUser();
   const userRole = user?.publicMetadata?.userType as "student" | "teacher";
-
+console.log('user?.publicMetadata?.userType', user?.publicMetadata?.userType)
+console.log("Random message one");
+console.log("Random message two");
+if (typeof window !== "undefined") {
+  alert("Navbar rendered");
+}
   return (
     <nav className="nondashboard-navbar">
       <div className="nondashboard-navbar__container">
